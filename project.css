@@ -1,0 +1,529 @@
+/* Global Styles - defines basic layout and color for the entire site */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER SECTION - logo and navigation menu */
+header {
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Logo text styling */
+header .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Navigation menu list */
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links styling */
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+header a:hover {
+  color: #d9ffd6;
+}
+
+/* Highlight for the current (active) page */
+header a.active {
+  border-bottom: 2px solid white;
+}
+
+/* HERO SECTION - main homepage banner */
+.hero {
+  background-color: #81C784;
+  text-align: center;
+  padding: 5rem 2rem;
+  color: white;
+}
+
+/* Hero text adjustments */
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* PAGE HEADER SECTION - used on subpages */
+.page-header {
+  background-color: #A5D6A7;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: white;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Individual recipe card styling */
+.recipe-card {
+  background-color: white;
+  width: 30%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover animation on recipe cards */
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Recipe images formatting */
+.recipe-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Recipe title color */
+.recipe-card h2 {
+  color: #4CAF50;
+}
+
+/* CALL-TO-ACTION SECTION - orange banner with button */
+.cta {
+  background-color: #FF9800;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+/* CTA button styling */
+.cta button {
+  background-color: white;
+  color: #FF9800;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* CTA button hover color */
+.cta button:hover {
+  background-color: #ffe0b2;
+}
+
+/* ABOUT & MEAL PLAN PAGE CONTENT - main text formatting */
+.about-content, .mealplan-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Subpage section headings color */
+.about-content h2, .mealplan-content h2 {
+  color: #4CAF50;
+  margin-top: 2rem;
+}
+
+/* FOOTER SECTION - stays at the bottom of the page */
+main {
+  flex: 1;
+}
+
+/* Footer appearance and spacing */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* WEEKLY MEAL PLAN TABLE SECTION */
+.weekly-table {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Table overall styling */
+.weekly-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header cells */
+.weekly-table th {
+  background-color: #4CAF50;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.75rem;
+}
+
+/* Table data cells */
+.weekly-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternating row colors for readability */
+.weekly-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover highlight for interactivity */
+.weekly-table tr:hover {
+  background-color: #f1f8e9;
+}
+
+/* Responsive design - horizontal scroll on small screens */
+@media (max-width: 600px) {
+  .weekly-table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* RESPONSIVE DESIGN - adjusts layout on smaller screens */
+@media (max-width: 768px) {
+  /* Stack recipe cards vertically on mobile */
+  .featured-recipes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe-card {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  /* Slightly reduce hero text size on smaller screens */
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ----------------------------- */
+/* CONTACT / FEEDBACK FORM STYLES */
+/* ----------------------------- */
+
+/* Section wrapper alignment */
+.form-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Small instructional note */
+.form-note {
+  margin: 0.25rem 0 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: left;
+}
+
+/* Card container for the form */
+.form-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Group spacing */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Label styling */
+.form-group > label,
+fieldset > legend {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: #2e7d32; /* deep green to match theme */
+}
+
+/* Inputs, selects, textareas base */
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font: inherit;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* Focus ring for accessibility */
+.form-card input[type="text"]:focus,
+.form-card input[type="email"]:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  background-color: #fff;
+}
+
+/* Checkbox/radio rows */
+.check-row,
+.radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.check-row label,
+.radio-row label {
+  font-weight: normal;
+}
+
+/* Fieldset visual reset & spacing */
+.form-card fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.8rem 1rem 1rem;
+  margin: 1rem 0;
+  background: #fcfcfc;
+}
+
+/* Terms spacing */
+.form-terms label {
+  font-weight: normal;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+/* Submit row */
+.form-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Submit button styled to match CTA theme */
+.btn-primary {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.08s ease;
+}
+
+.btn-primary:hover {
+  background-color: #43a047;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .form-card {
+    padding: 1rem;
+  }
+  .check-row, .radio-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.gallery {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: left;
+}
+.gallery h2 { color: #2e7d32; margin-bottom: .5rem; }
+.gallery-note { font-size: .9rem; color: #666; margin-top: .75rem; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.gallery-item {
+  display: block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+.gallery-item .caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: .45rem .6rem;
+  font-size: .9rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.gallery-item:hover,
+.gallery-item:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+.gallery-item:hover img,
+.gallery-item:focus img { transform: scale(1.05); }
+.gallery-item:hover .caption,
+.gallery-item:focus .caption { opacity: 1; }
+.gallery-item:focus { outline: 3px solid #4CAF50; outline-offset: 2px; }
+
+/* ============ DETAILS/SUMMARY WIDGET (FAQs) ============ */
+.faqs {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.faqs details {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  margin: .75rem 0;
+  padding: .25rem .75rem .5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+.faqs summary {
+  cursor: pointer;
+  list-style: none; /* hide default marker in some browsers */
+  font-weight: 700;
+  padding: .6rem 0;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.faqs summary::-webkit-details-marker { display: none; }
+.faqs summary:focus { outline: 3px solid #4CAF50; outline-offset: 2px; }
+.faqs details[open] summary { color: #1b5e20; }
+.faqs details p { margin: 0 0 .6rem 0; line-height: 1.6; color: #444; }
+
+@media (max-width: 640px) {
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .gallery-item img { height: 140px; }
+}
+
+/* === Featured Recipes Grid Fix === */
+.featured-recipes {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.featured-recipes h2 {
+  color: #2e7d32;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Card styling */
+.recipe-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  max-width: 340px;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #1b5e20;
+}
+
+.recipe-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0.5rem 1rem 1rem;
+}
+
+.recipe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive tweaks */
+@media (max-width: 960px) {
+  .recipe-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .recipe-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .recipe-card img {
+    height: 160px;
+  }
+}
