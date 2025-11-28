@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="project.css">
 </head>
 <body>
-  <!-- HEADER -->
   <header>
     <div class="logo">Healthy Recipe & Meal Plan Central</div>
     <nav aria-label="Main navigation">
@@ -32,7 +31,6 @@
       <p>We focus on balanced, time-saving meals using accessible ingredients and simple techniques.</p>
     </section>
 
-    <!-- DETAILS/SUMMARY WIDGET (collapsible FAQs) -->
     <section class="faqs" aria-labelledby="faqTitle">
       <h2 id="faqTitle">Quick FAQs</h2>
 
@@ -51,11 +49,44 @@
         <p>Yes—many recipes include vegetarian, vegan, gluten-free, and dairy-free suggestions directly in the instructions.</p>
       </details>
     </section>
+    <section class="form-section">
+      <h2>Send Us Your Feedback</h2>
+      <p class="form-note">
+        Have a question or suggestion? Required fields are marked with *.
+      </p>
+
+      <div class="form-card">
+        <form id="feedback-form" action="https://webdevbasics.net/scripts/demo.php" method="post" novalidate>
+      
+      <!-- Error message container for JS validation -->
+          <p id="form-errors" class="form-note" aria-live="polite"></p>
+
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email">
+          </div>
+
+          <div class="form-group">
+            <label for="goal">Your Message</label>
+            <textarea id="goal" name="goal" rows="3"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Send Feedback</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 Healthy Recipe & Meal Plan Central | Designed by Noah Toups</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

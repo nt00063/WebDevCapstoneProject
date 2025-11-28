@@ -5,21 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products | Healthy Recipe & Meal Plan Central</title>
   <link rel="stylesheet" href="project.css" />
-
-  <script>
-    function addToCart(item) {
-      const popup = document.getElementById("cart-popup");
-      document.getElementById("cart-item-name").textContent = item;
-      popup.style.display = "block";
-
-      setTimeout(() => {
-        popup.style.display = "none";
-      }, 2000);
-    }
-  </script>
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
     <div class="logo">Healthy Recipe & Meal Plan Central</div>
     <nav aria-label="Main navigation">
@@ -35,41 +24,43 @@
 
   <main>
 
+    <!-- PAGE HEADER -->
     <section class="page-header">
       <h1>Shop Healthy Tools & Resources</h1>
       <p>Stay organized, motivated, and healthy with these helpful items.</p>
     </section>
 
+    <!-- PRODUCT GALLERY -->
     <section class="product-section">
       <h2>Healthy Products</h2>
 
       <div class="product-grid">
 
-        <!-- Product 1 -->
+        <!-- PRODUCT 1 -->
         <article class="product-card">
           <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop"
                alt="Weekly meal planner notebook">
           <h3>Weekly Meal Planner</h3>
           <p>Printable PDF for planning meals efficiently and staying organized.</p>
-          <button class="add-btn" onclick="addToCart('Weekly Meal Planner')">Add to Cart</button>
+          <button class="add-btn" data-item="Weekly Meal Planner">Add to Cart</button>
         </article>
 
-        <!-- Product 2 -->
+        <!-- PRODUCT 2 -->
         <article class="product-card">
           <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop"
                alt="Healthy recipe cookbook">
           <h3>Healthy Eating Cookbook</h3>
           <p>50 beginner-friendly recipes to make nutritious eating easy.</p>
-          <button class="add-btn" onclick="addToCart('Healthy Eating Cookbook')">Add to Cart</button>
+          <button class="add-btn" data-item="Healthy Eating Cookbook">Add to Cart</button>
         </article>
 
-        <!-- Product 3 -->
+        <!-- PRODUCT 3 -->
         <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=687&auto=format&fit=crop"
                alt="Reusable eco-friendly hydration bottle">
           <h3>Reusable Hydration Bottle</h3>
           <p>BPA-free, eco-friendly bottle perfect for daily hydration.</p>
-          <button class="add-btn" onclick="addToCart('Reusable Hydration Bottle')">Add to Cart</button>
+          <button class="add-btn" data-item="Reusable Hydration Bottle">Add to Cart</button>
         </article>
 
       </div>
@@ -82,9 +73,12 @@
     <p><strong id="cart-item-name"></strong> added to cart! (Demo Only)</p>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Healthy Recipe & Meal Plan Central | Designed by Noah Toups</p>
   </footer>
 
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>
